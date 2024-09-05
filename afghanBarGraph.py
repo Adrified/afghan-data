@@ -17,14 +17,11 @@ bar_width = 0.35
 x_pos_female = [i - bar_width / 2 for i in range(len(age_groups))]
 x_pos_male = [i + bar_width / 2 for i in range(len(age_groups))]
 
-# Create bars
 ax.bar(x_pos_female, refugees_data["Female"], color="red", width=bar_width, label = "Female")
 ax.bar(x_pos_male, refugees_data["Male"], color="green", width=bar_width, label = "Male")
-
 ax.set_xlabel("Age Group", fontsize=12, color = 'grey')
 ax.set_ylabel("Number of Refugees", fontsize=12, color = 'grey')
 ax.set_title("Demographics of Afghan Refugees in US, 2022", fontweight="bold", fontsize=12)
-
 ax.legend()
 
 ax.set_xticks([i for i in range(len(age_groups))])
